@@ -6,7 +6,7 @@ interface HeaderProps {
   setDisplay: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ContactHero: React.FC<HeaderProps> = ({ display, setDisplay }) => {
+const ContactHero: React.FC<HeaderProps> = ({ setDisplay }) => {
   return (
     <section
       style={{ backgroundImage: `url(${bgimg})` }}

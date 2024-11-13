@@ -8,7 +8,7 @@ interface HeaderProps {
   setDisplay: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Hero: React.FC<HeaderProps> = ({ display, setDisplay }) => {
+const Hero: React.FC<HeaderProps> = ({ setDisplay }) => {
   const [text] = useTypewriter({
     words: ["Front-End Developer", "Doniyor Ro'ziqulov"],
     loop: true,
