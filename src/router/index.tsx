@@ -1,25 +1,37 @@
-import { lazy, LazyExoticComponent } from "react";
+import { lazy, LazyExoticComponent, useState } from "react";
 import { useRoutes } from "react-router-dom";
 import { SuspenseComponent as Suspense } from "../utils";
-import Contact from "../pages/contact/Contact";
 
-const Home: LazyExoticComponent<any> = lazy(() => import("../pages/home/Home"));
+interface DisplayProps {
+  display: boolean;
+  setDisplay: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const About: LazyExoticComponent<any> = lazy(
+const Home: LazyExoticComponent<React.FC<DisplayProps>> = lazy(
+  () => import("../pages/home/Home")
+);
+
+const Contact: LazyExoticComponent<React.FC<DisplayProps>> = lazy(
+  () => import("../pages/contact/Contact")
+);
+
+const About: LazyExoticComponent<React.FC<DisplayProps>> = lazy(
   () => import("../pages/about/About")
 );
 
-const Layout: LazyExoticComponent<any> = lazy(
+const Layout: LazyExoticComponent<React.FC<DisplayProps>> = lazy(
   () => import("../pages/layout/Layout")
 );
 
 const Routers = () => {
+  const [display, setDisplay] = useState(false);
+
   return useRoutes([
     {
       path: "/",
       element: (
         <Suspense>
-          <Layout />
+          <Layout display={display} setDisplay={setDisplay} />
         </Suspense>
       ),
       children: [
@@ -27,7 +39,7 @@ const Routers = () => {
           path: "/",
           element: (
             <Suspense>
-              <Home />
+              <Home display={display} setDisplay={setDisplay} />
             </Suspense>
           ),
         },
@@ -35,7 +47,7 @@ const Routers = () => {
           path: "/about",
           element: (
             <Suspense>
-              <About />
+              <About display={display} setDisplay={setDisplay} />
             </Suspense>
           ),
         },
@@ -43,7 +55,7 @@ const Routers = () => {
           path: "/contact",
           element: (
             <Suspense>
-              <Contact />
+              <Contact display={display} setDisplay={setDisplay} />
             </Suspense>
           ),
         },

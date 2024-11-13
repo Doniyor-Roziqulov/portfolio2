@@ -8,8 +8,61 @@ span {
 
 .content h2 {
   position: absolute;
-  /* transform: translate(-50%, -50%); */
-  font-size: 200px;
+  font-size: 50px;
+}
+
+@media (min-width: 410px) {
+  .content h2 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 472px) {
+  .content h2 {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 515px) {
+  .content h2 {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 590px) {
+  .content h2 {
+    font-size: 90px;
+  }
+}
+
+@media (min-width: 680px) {
+  .content h2 {
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content h2 {
+    font-size: 120px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .content h2 {
+    font-size: 140px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .content h2 {
+    font-size: 160px;
+  }
+}
+
+@media (min-width: 1480px) {
+  .content h2 {
+    font-size: 200px;
+  }
 }
 
 .content_one {
@@ -177,7 +230,6 @@ span {
 
 /* loading style  */
 
-/* From Uiverse.io by AbanoubMagdy1 */
 .loader {
   --dim: 3rem;
   width: var(--dim);

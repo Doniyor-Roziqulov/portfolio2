@@ -1,24 +1,14 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../images/web_dev_network-512.webp";
-import { RiCloseLargeLine, RiContactsLine, RiHomeLine } from "react-icons/ri";
+import { RiContactsLine, RiHomeLine } from "react-icons/ri";
 import { FiAlertCircle } from "react-icons/fi";
 
-interface HeaderProps {
-  display: boolean;
-  setDisplay: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Header: React.FC<HeaderProps> = ({ display, setDisplay }) => {
-  return display === false ? (
-    <></>
-  ) : (
-    <header className="relative z-[60] lg:hidden">
+const Headers: React.FC = () => {
+  return (
+    <header className="relative z-[60] hidden lg:block">
       <div className="w-[200px] pt-6 fixed top-0 right-0 z-10 h-full bg-black border-l">
-        <button className="lg:hidden" onClick={() => setDisplay(false)}>
-          <RiCloseLargeLine className="text-white absolute text-2xl top-5 right-5" />
-        </button>
         <div className="flex justify-center">
-          <NavLink onClick={() => setDisplay(false)} to={"/"}>
+          <NavLink to={"/"}>
             <img
               className="bg-white rounded-full w-[90px] rotating-image"
               src={logo}
@@ -29,7 +19,6 @@ const Header: React.FC<HeaderProps> = ({ display, setDisplay }) => {
         <ul className="flex flex-col px-8  gap-y-5 mt-14 header__list">
           <li>
             <NavLink
-              onClick={() => setDisplay(false)}
               className="text-gray-400 text-2xl border-y border-black flex py-1 items-center font-semibold transition-all gap-x-2 hover:text-gray-700"
               to={"/"}
             >
@@ -39,7 +28,6 @@ const Header: React.FC<HeaderProps> = ({ display, setDisplay }) => {
           </li>
           <li>
             <NavLink
-              onClick={() => setDisplay(false)}
               className="text-gray-400 text-2xl border-y border-black flex py-1 items-center font-semibold transition-all gap-x-2 hover:text-gray-700"
               to={"/about"}
             >
@@ -48,7 +36,6 @@ const Header: React.FC<HeaderProps> = ({ display, setDisplay }) => {
           </li>
           <li>
             <NavLink
-              onClick={() => setDisplay(false)}
               className="text-gray-400 text-2xl border-y border-black flex py-1 items-center font-semibold transition-all gap-x-2 hover:text-gray-700"
               to={"/contact"}
             >
@@ -64,4 +51,4 @@ const Header: React.FC<HeaderProps> = ({ display, setDisplay }) => {
   );
 };
 
-export default Header;
+export default Headers;

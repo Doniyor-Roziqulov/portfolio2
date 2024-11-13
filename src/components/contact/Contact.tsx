@@ -30,16 +30,16 @@ const Contacts = () => {
   };
 
   return (
-    <section className="py-20 bg-[#1d2b3a] relative">
-      <p className="text-[200px] text-skills text-slate-800 font-semibold absolute top-[-60px] pointer-events-none left-[200px]">
+    <section className="py-24 lg:py-20 bg-[#1d2b3a] relative">
+      <p className="text-[80px] xl:text-[200px] text-skills text-slate-800 min-[730px]:text-[130px] font-semibold absolute top-[-30px] lg:top-[-60px] pointer-events-none lg:left-[200px]">
         Contact
       </p>
-      <div className="mx-auto container px-14">
-        <div className="grid grid-cols-2 items-center gap-x-3">
+      <div className="mx-auto container px-4 lg:px-14">
+        <div className="grid lg:grid-cols-2 items-center gap-x-3">
           <div>
             <form
               onSubmit={handleCreate}
-              className="flex flex-col gap-y-7 w-[500px]"
+              className="flex flex-col gap-y-7 w-full min-[640px]:w-[400px] min-[730px]:w-[500px] mx-auto lg:w-[350px] xl:w-[500px]"
               action=""
             >
               <div className="w-full input__box">
@@ -89,7 +89,7 @@ const Contacts = () => {
           </div>
           <div>
             <img
-              className="animate-pulse w-[600px]"
+              className="animate-pulse hidden lg:block w-[600px]"
               src={contactimg}
               alt="contact photo"
             />
