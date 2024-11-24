@@ -42,6 +42,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <p className="text-orange-50 pl-12">
+          © 2024 - Creative Frontend Ltd. All rights reserved.
+        </p>
       </div>
     </footer>
   );
