@@ -59,7 +59,7 @@ const Using = () => {
           <FaBootstrap
             data-aos="zoom-in"
             title="Bootstrap"
-            className="text-3xl top-[40px] lg:top-0 right-8 lg:text-6xl rounded-md text-violet-700 item7 p-1 relative lg:right-28"
+            className="text-3xl top-[40px] lg:top-0 right-8 lg:text-6xl rounded-md text-violet-700 item7 p-1 relative lg:right-14"
           />
           <RiTailwindCssFill
             data-aos="zoom-in"

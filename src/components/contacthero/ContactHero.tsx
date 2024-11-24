@@ -10,7 +10,7 @@ const ContactHero: React.FC<HeaderProps> = ({ setDisplay }) => {
   return (
     <section
       style={{ backgroundImage: `url(${bgimg})` }}
-      className="min-h-screen bg-no-repeat bg-cover relative"
+      className="min-h-96 md:min-h-screen bg-no-repeat bg-cover relative"
     >
       <button
         className="absolute top-5 right-5 z-50 lg:hidden"
@@ -18,7 +18,7 @@ const ContactHero: React.FC<HeaderProps> = ({ setDisplay }) => {
       >
         <GiHamburgerMenu className="text-white text-2xl" />
       </button>
-      <div className="mx-auto container min-h-screen flex items-center justify-center">
+      <div className="mx-auto container min-h-96 md:min-h-screen flex items-center justify-center">
         <h1 className="font-bold text-stone-300 text-6xl min-[700px]:text-[100px] lg:text-[200px]">
           CONTACT
         </h1>
