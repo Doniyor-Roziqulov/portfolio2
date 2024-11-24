@@ -1,13 +1,13 @@
+import { useState } from "react";
 import contactimg from "../../images/contact.webp";
 import { PatternFormat } from "react-number-format";
 
 const BOT_TOKEN = "7581349013:AAE7C72Z9lQqeObyQjHhHlC21_c5zB38v0c";
 const USER_ID = "6227525533";
 
-//  https://api.telegram.org/bot7581349013:AAE7C72Z9lQqeObyQjHhHlC21_c5zB38v0c/getUpdates
-// https://api.telegram.org/bot[your_token]/sendMessage?chat_id=[your chat_id]
-
 const Contacts = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+
   const handleCreate = (e: any) => {
     e.preventDefault();
     let formData = new FormData(e.target);
@@ -27,6 +27,9 @@ const Contacts = () => {
     let api = new XMLHttpRequest();
     api.open("GET", url, true);
     api.send();
+
+    e.target.reset();
+    setPhoneNumber(""); // Telefon raqamini tozalash
   };
 
   return (
@@ -65,6 +68,8 @@ const Contacts = () => {
               <div className="w-full input__box">
                 <PatternFormat
                   name="number"
+                  value={phoneNumber}
+                  onValueChange={(values) => setPhoneNumber(values.value)}
                   className="border w-full input_me pl-2 border-[#ffffff40] py-3 outline-none text-white bg-[#1d2b3a]"
                   format="+998 (##) ### ## ##"
                   allowEmptyFormatting
