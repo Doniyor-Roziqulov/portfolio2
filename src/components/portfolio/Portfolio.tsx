@@ -18,7 +18,7 @@ const Portfolio = () => {
       >
         <p className="text-2xl pro__name font-bold text-sky-400">{e.name}</p>
         <a
-          className="text-black text-lg items-center flex opacity-0 gap-x-1 bg-sky-400 px-4 py-1 border hover:text-sky-400 hover:border-sky-400 hover:bg-transparent"
+          className="text-black text-lg items-center flex opacity-1 lg:opacity-0 gap-x-1 bg-sky-400 px-4 py-1 border hover:text-sky-400 hover:border-sky-400 hover:bg-transparent"
           target="_blank"
           key={inx}
           href={e.link}

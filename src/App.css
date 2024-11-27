@@ -132,6 +132,8 @@ span {
 
 .pro__name {
   text-shadow: 5px 10px 10px #000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .pro__text {
