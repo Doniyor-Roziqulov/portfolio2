@@ -13,7 +13,7 @@ const AboutHero: React.FC<HeaderProps> = ({ setDisplay }) => {
       className=" min-h-96 md:min-h-screen bg-no-repeat bg-cover relative"
     >
       <button
-        className="absolute top-5 right-5 z-50 lg:hidden"
+        className="fixed top-5 right-5 z-50 lg:hidden"
         onClick={() => setDisplay(true)}
       >
         <GiHamburgerMenu className="text-white lg:text-black text-2xl" />

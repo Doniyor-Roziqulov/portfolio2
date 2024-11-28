@@ -28,7 +28,7 @@ const Hero: React.FC<HeaderProps> = ({ setDisplay }) => {
       className="h-[500px] min-[780px]:h-[600px] relative lg:h-[730px] min-[780px]:bg-[length:400px_400px] bg-[length:300px_300px] bg-[#000d] 2xl:bg-[#000] lg:bg-[length:600px_600px] bg-no-repeat bg-right bg-black"
     >
       <button
-        className="absolute top-5 right-5 z-50 lg:hidden"
+        className="fixed top-5 right-5 z-50 lg:hidden"
         onClick={() => setDisplay(true)}
       >
         <GiHamburgerMenu className="text-white text-2xl" />

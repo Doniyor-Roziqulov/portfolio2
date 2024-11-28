@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ display, setDisplay }) => {
           <li>
             <NavLink
               onClick={() => setDisplay(false)}
-              className="text-gray-400 text-2xl border-y border-black flex py-1 items-center font-semibold transition-all gap-x-2 hover:text-gray-700"
+              className="text-gray-400 lissss text-2xl border-y border-black flex py-1 items-center font-semibold transition-all gap-x-2 hover:text-gray-700"
               to={"/"}
             >
               <RiHomeLine />
